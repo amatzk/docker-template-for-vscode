@@ -1,18 +1,24 @@
 // written by amatzk
-
+//
 // devcontainer.json リファレンス
 // https://containers.dev/implementors/json_reference/
 {
     // UIに表示されるDevContainer名
     "name": "rust-ubuntu-container",
-    "dockerFile": "Dockerfile",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
     "customizations": {
         // VSCodeや拡張機能の設定
         "vscode": {
             // 設定（コンテナ内全体で有効）
-            "settings": {},
+            "settings": {
+                // ここに設定を記述
+            },
             // 拡張機能（コンテナ内全体で有効）
-            "extensions": []
+            "extensions": [
+                // 欲しい拡張機能IDを記述
+            ]
         }
     },
     // コンテナ内で実行するユーザーを上書き
