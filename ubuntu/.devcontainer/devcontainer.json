@@ -4,7 +4,7 @@
 // https://containers.dev/implementors/json_reference/
 {
     // UIに表示されるDevContainer名
-    "name": "rust-ubuntu-container",
+    "name": "ubuntu-container",
     "build": {
         "dockerfile": "Dockerfile"
     },
