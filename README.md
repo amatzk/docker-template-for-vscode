@@ -1,11 +1,26 @@
 # docker-template-for-vscode
 
 ## Requirements
+
 - Visual Studio Code
     - Dev Containers
 - Docker
 
+## ubuntu
+
+Ubuntu に Git を入れただけ
+
+- docker image
+	- ubuntu : rolling (latest release)
+- Installed Tools
+	- Git  (latest release)
+- VSCode Extentions
+	- None
+
 ## rust-ubuntu
+
+Rust用開発環境
+
 - docker image
 	- ubuntu : rolling (latest release)
 - Installed Tools
