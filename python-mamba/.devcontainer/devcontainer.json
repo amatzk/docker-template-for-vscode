@@ -1,0 +1,48 @@
+{
+    "name": "python-mcr",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:debian",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.formatting.provider": "none",
+                "python.linting.pylintEnabled": false,
+                "python.linting.lintOnSave": true,
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "[python]": {
+                    "editor.formatOnPaste": true,
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll": true
+                    }
+                },
+                "ruff.args": [
+                    "--select=E,W,F,B,I,N,A,UP,C4,PL,PD,NPY,C90,COM"
+                ]
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.black-formatter",
+                "charliermarsh.ruff",
+                "KevinRose.vsc-python-indent",
+                "njpwerner.autodocstring"
+            ]
+        }
+    },
+    "features": {
+        // Git
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest",
+            "ppa": true
+        },
+        // Mambaforge
+        "ghcr.io/rocker-org/devcontainer-features/miniforge:1": {
+            "version": "latest",
+            "variant": "Mambaforge"
+        }
+    },
+    // setup mamba
+    "postCreateCommand": [
+        "${containerWorkspaceFolder}/.devcontainer/setup.sh"
+    ]
+}
