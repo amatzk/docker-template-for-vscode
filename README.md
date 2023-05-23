@@ -11,6 +11,7 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+
 	// Dockerイメージの指定（Dockerfileを指定しない場合）
     // 
     // 次の３つのコンテナレジストリをサポート
@@ -20,25 +21,32 @@
 	//
 	// ex) Microsoft DevContainer: Ubuntu 最新
 	// "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    
     "customizations": {
+    
         // VSCodeや拡張機能の設定
         "vscode": {
+    
             // 設定（コンテナ内全体で有効）
             "settings": {
                 // ここに設定を記述
             },
+
             // 拡張機能（コンテナ内全体で有効）
             "extensions": [
                 // 欲しい拡張機能IDを記述
             ]
         }
     },
+
     // コンテナ内で実行するユーザーを上書き
     "remoteUser": "vscode",
+    
     // Features
     // ツール、ランタイム、ライブラリの「機能」を開発コンテナに迅速かつ簡単に追加し、自分や共同作業者が使用できるようにする「機能」
     // 公開 Features 一覧：https://containers.dev/features
     "features": {
+    
         // Git
         // https://github.com/devcontainers/features/tree/main/src/git
         "ghcr.io/devcontainers/features/git:1": {
@@ -46,6 +54,7 @@
             "ppa": true
         }
     },
+    
     // ランタイム引数
     "runArgs": [
         // 開発コンテナ内のプロセスが、ptraceシステムコールを使用して
@@ -57,10 +66,12 @@
         "--security-opt",
         "seccomp=unconfined"
     ],
+    
     // ポートフォワード
     "forwardPorts": [
         // 8080
     ]
+    
     // ワークスペースの設定
     // 開発コンテナ内で使用するワークスペースのパスを指定する
     // デフォルトは /workspace/ 配下
