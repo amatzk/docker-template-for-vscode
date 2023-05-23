@@ -2,7 +2,7 @@
 // https://containers.dev/implementors/json_reference/
 {
     // UIに表示されるDevContainer名
-    "name": "ubuntu-container",
+    "name": "ubuntu",
     "build": {
         "dockerfile": "Dockerfile"
     },

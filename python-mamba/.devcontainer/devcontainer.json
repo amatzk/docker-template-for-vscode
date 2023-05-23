@@ -1,5 +1,5 @@
 {
-    "name": "python-mcr",
+    "name": "python-mamba",
     "image": "mcr.microsoft.com/vscode/devcontainers/base:debian",
     "customizations": {
         "vscode": {

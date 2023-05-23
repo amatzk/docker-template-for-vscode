@@ -1,5 +1,5 @@
 {
-    "name": "rust-debian",
+    "name": "rust-ms",
     "image": "mcr.microsoft.com/vscode/devcontainers/rust",
     "customizations": {
         "vscode": {

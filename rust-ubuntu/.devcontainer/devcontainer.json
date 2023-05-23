@@ -1,5 +1,5 @@
 {
-    "name": "rust-ubuntu-container",
+    "name": "rust-ubuntu",
     "build": {
         "dockerfile": "Dockerfile"
     },
