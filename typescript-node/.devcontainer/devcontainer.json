@@ -1,0 +1,19 @@
+{
+    "name": "typescript-dev",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "[typescript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode",
+                },
+                "editor.formatOnPaste": true,
+                "editor.formatOnSave": true
+            },
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "VisualStudioExptTeam.vscodeintellicode"
+            ]
+        }
+    }
+}
