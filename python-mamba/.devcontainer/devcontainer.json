@@ -1,6 +1,6 @@
 {
     "name": "python-mamba",
-    "image": "mcr.microsoft.com/vscode/devcontainers/base:debian",
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
     "customizations": {
         "vscode": {
             "settings": {

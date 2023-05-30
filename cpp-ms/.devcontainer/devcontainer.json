@@ -1,6 +1,6 @@
 {
     "name": "cpp-dev",
-    "image": "mcr.microsoft.com/vscode/devcontainers/cpp",
+    "image": "mcr.microsoft.com/devcontainers/cpp",
     "customizations": {
         "vscode": {
             "settings": {

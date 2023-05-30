@@ -1,6 +1,6 @@
 {
     "name": "rust-ms",
-    "image": "mcr.microsoft.com/vscode/devcontainers/rust",
+    "image": "mcr.microsoft.com/devcontainers/rust",
     "customizations": {
         "vscode": {
             "settings": {
