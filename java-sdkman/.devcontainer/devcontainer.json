@@ -1,0 +1,36 @@
+{
+    "name": "java-dev",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:debian",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "java.format.settings.profile": "GoogleStyle",
+                "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+                "[java]": {
+                    "editor.defaultFormatter": "redhat.java",
+                    "editor.formatOnPaste": true,
+                    "editor.formatOnSave": true
+                }
+            },
+            "extensions": [
+                "vscjava.vscode-gradle"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:latest": {
+            "version": "latest",
+            "ppa": true
+        },
+        "ghcr.io/devcontainers/features/java:latest": {
+            "version": "latest",
+            "jdkDistro": "tem",
+            "installGradle": true,
+            "gradleVersion": "latest",
+            "installMaven": true,
+            "mavenVersion": "latest",
+            "installAnt": false,
+            "antVersion": "latest"
+        }
+    }
+}
