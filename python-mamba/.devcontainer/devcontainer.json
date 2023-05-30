@@ -31,12 +31,12 @@
     },
     "features": {
         // Git
-        "ghcr.io/devcontainers/features/git:1": {
+        "ghcr.io/devcontainers/features/git:latest": {
             "version": "latest",
             "ppa": true
         },
         // Mambaforge
-        "ghcr.io/rocker-org/devcontainer-features/miniforge:1": {
+        "ghcr.io/rocker-org/devcontainer-features/miniforge:latest": {
             "version": "latest",
             "variant": "Mambaforge"
         }

@@ -25,7 +25,7 @@
     },
     "remoteUser": "vscode",
     "features": {
-        "ghcr.io/devcontainers/features/git:1": {
+        "ghcr.io/devcontainers/features/git:latest": {
             "version": "latest",
             "ppa": true
         }
