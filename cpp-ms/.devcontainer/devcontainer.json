@@ -5,9 +5,11 @@
         "vscode": {
             "settings": {
                 "C_Cpp.clang_format_fallbackStyle": "Google",
-                "editor.defaultFormatter": "ms-vscode.cpptools",
-                "editor.formatOnSave": true,
-                "editor.formatOnPaste": true
+                "[cpp]": {
+                    "editor.defaultFormatter": "ms-vscode.cpptools",
+                    "editor.formatOnSave": true,
+                    "editor.formatOnPaste": true
+                }
             },
             "extensions": [
                 "vadimcn.vscode-lldb",
