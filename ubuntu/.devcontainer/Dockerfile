@@ -20,7 +20,9 @@ SHELL ["/bin/bash", "-c"]
 # apt-get clean                   aptキャッシュをクリーン
 # rm -rf /var/lib/apt/lists/*     キャッシュされている全パッケージリストを削除
 # https://docs.docker.jp/engine/articles/dockerfile_best-practice.html
-RUN apt-get update && apt-get install -y \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
     sudo \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
