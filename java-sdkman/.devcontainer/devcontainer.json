@@ -6,6 +6,7 @@
             "settings": {
                 "java.format.settings.profile": "GoogleStyle",
                 "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+                "redhat.telemetry.enabled": false,
                 "[java]": {
                     "editor.defaultFormatter": "redhat.java",
                     "editor.formatOnPaste": true,
@@ -13,7 +14,7 @@
                 }
             },
             "extensions": [
-                "vscjava.vscode-gradle"
+                "vscjava.vscode-gradle"  // Gradle の拡張機能
             ]
         }
     },
@@ -23,13 +24,13 @@
             "ppa": true
         },
         "ghcr.io/devcontainers/features/java:latest": {
-            "version": "latest",
+            "version": "latest",  // JDK(LTS)バージョン
             "jdkDistro": "tem",
-            "installGradle": true,
+            "installGradle": true,  // Gradle を使用->true,不使用->false
             "gradleVersion": "latest",
-            "installMaven": true,
+            "installMaven": true,  // Maven を使用->true,不使用->false
             "mavenVersion": "latest",
-            "installAnt": false,
+            "installAnt": false,  // Ant を使用->true,不使用->false
             "antVersion": "latest"
         }
     }
