@@ -1,10 +1,14 @@
 {
     "name": "cpp-dev",
-    "image": "mcr.microsoft.com/devcontainers/cpp",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
     "customizations": {
         "vscode": {
             "settings": {
                 "C_Cpp.clang_format_fallbackStyle": "Google",
+                "C_Cpp.codeAnalysis.clangTidy.enabled": true,
                 "[cpp]": {
                     "editor.defaultFormatter": "ms-vscode.cpptools",
                     "editor.formatOnSave": true,
@@ -12,6 +16,7 @@
                 }
             },
             "extensions": [
+                // "vscjava.vscode-gradle",  // Gradleを使うならコメントアウトを外す
                 "vadimcn.vscode-lldb",
                 "jeff-hykin.better-cpp-syntax"
             ]
