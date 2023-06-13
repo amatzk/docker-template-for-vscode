@@ -1,6 +1,6 @@
 {
     "name": "java-dev",
-    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "customizations": {
         "vscode": {
             "settings": {
