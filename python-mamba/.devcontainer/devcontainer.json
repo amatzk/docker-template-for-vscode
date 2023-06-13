@@ -1,6 +1,6 @@
 {
     "name": "python-mamba",
-    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
     "customizations": {
         "vscode": {
             "settings": {
@@ -41,8 +41,5 @@
             "variant": "Mambaforge"
         }
     },
-    // setup mamba
-    "postCreateCommand": [
-        "${containerWorkspaceFolder}/.devcontainer/setup.sh"
-    ]
+    "postCreateCommand": "/bin/bash ${containerWorkspaceFolder}/.devcontainer/setup.sh"
 }
