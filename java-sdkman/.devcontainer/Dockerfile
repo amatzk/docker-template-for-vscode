@@ -1,8 +1,5 @@
-# C++ - DevContiner公式イメージ
-#
+# Debian - DevContiner公式イメージ
 # * Docker Hub | VS Code Remote : https://hub.docker.com/_/microsoft-vscode-devcontainers
-# * GitHub | vscode/devcontainer/cpp : https://github.com/microsoft/vscode-dev-containers/tree/main/containers/cpp
-# * GitHub | devcontainer/cpp : https://github.com/devcontainers/images/tree/main/src/cpp
 FROM mcr.microsoft.com/devcontainers/base:debian
 
 # [オプション] 追加パッケージのインストール
