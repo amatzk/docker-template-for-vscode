@@ -1,37 +1,46 @@
 {
     "name": "java-dev",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "init": true,
     "customizations": {
         "vscode": {
             "settings": {
-                "java.format.settings.profile": "GoogleStyle",
+                "java.compile.nullAnalysis.mode": "automatic", // null解析のモード
+                "java.format.settings.profile": "GoogleStyle", // フォーマットスタイル
                 "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-                "redhat.telemetry.enabled": false,
+                "java.import.gradle.wrapper.enabled": false, // Gradle拡張機能が用意する「gradle-wrapper.properties」ファイルからgradleを使用
+                "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/current", // Java言語サーバーの起動に使用するJDKのフォルダ
+                "maven.executable.preferMavenWrapper": false, // Maven wrapperの使用を希望するかどうか
+                "redhat.telemetry.enabled": false, // テレメトリ（ソフトウェアの使用状況やパフォーマンスデータを収集）
                 "[java]": {
-                    "editor.defaultFormatter": "redhat.java",
+                    "editor.defaultFormatter": "redhat.java", // Java フォーマッター
                     "editor.formatOnPaste": true,
                     "editor.formatOnSave": true
                 }
             },
             "extensions": [
-                "vscjava.vscode-gradle"  // Gradle の拡張機能
+                "vscjava.vscode-java-pack",
+                "vscjava.vscode-gradle"
             ]
         }
     },
     "features": {
+        "ghcr.io/devcontainers/features/java:latest": {
+            "version": "17", // Java バージョン, latest = SDKMAN が指定する最新の安定したバージョン, jdkDistroは無視される
+            "jdkDistro": "ms", // Java ディストロ
+            "installGradle": true, // Gradleのインストール
+            "gradleVersion": "latest",
+            "installMaven": false, // Mavenのインストール
+            "mavenVersion": "latest",
+            "installAnt": false, // Antのインストール
+            "antVersion": "latest"
+        },
         "ghcr.io/devcontainers/features/git:latest": {
             "version": "latest",
             "ppa": true
-        },
-        "ghcr.io/devcontainers/features/java:latest": {
-            "version": "latest",  // JDK(LTS)バージョン
-            "jdkDistro": "tem",
-            "installGradle": true,  // Gradle を使用->true,不使用->false
-            "gradleVersion": "latest",
-            "installMaven": true,  // Maven を使用->true,不使用->false
-            "mavenVersion": "latest",
-            "installAnt": false,  // Ant を使用->true,不使用->false
-            "antVersion": "latest"
         }
     }
 }
