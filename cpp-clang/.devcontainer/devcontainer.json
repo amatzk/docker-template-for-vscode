@@ -16,10 +16,17 @@
                 }
             },
             "extensions": [
-                // "vscjava.vscode-gradle",  // Gradleを使うならコメントアウトを外す
                 "vadimcn.vscode-lldb",
-                "jeff-hykin.better-cpp-syntax"
+                "jeff-hykin.better-cpp-syntax",
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools"
             ]
         }
-    }
+    },
+    "capAdd": [
+        "SYS_PTRACE"
+    ],
+    "securityOpt": [
+        "seccomp=unconfined"
+    ]
 }
