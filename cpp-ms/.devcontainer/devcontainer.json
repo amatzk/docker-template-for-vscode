@@ -17,16 +17,8 @@
             },
             "extensions": [
                 "vadimcn.vscode-lldb",
-                "jeff-hykin.better-cpp-syntax",
-                "ms-vscode.cpptools",
-                "ms-vscode.cmake-tools"
+                "jeff-hykin.better-cpp-syntax"
             ]
         }
-    },
-    "capAdd": [
-        "SYS_PTRACE"
-    ],
-    "securityOpt": [
-        "seccomp=unconfined"
-    ]
+    }
 }

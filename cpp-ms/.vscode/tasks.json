@@ -1,0 +1,52 @@
+{
+	"version": "2.0.0", // tasks.jsonファイルのバージョンを指定
+	"tasks": [ // タスクの配列を定義
+		{
+			"type": "shell", // タスクのタイプを指定: この場合、シェルコマンドを実行
+			"label": "CMake: Clean Build Directory", // タスクの名前を指定
+			"command": "rm", // 実行するコマンドを指定
+			"args": [ // コマンドに渡す引数を指定
+				"-rf",
+				"${workspaceFolder}/build/*"
+			],
+			"group": { // タスクを特定のグループに関連付け: この場合、ビルドグループに関連付け
+				"kind": "build"
+			},
+			"detail": "CMake: buildディレクトリを削除"
+		},
+		{
+			"type": "shell",
+			"label": "CMake: Configure Build System",
+			"command": "cmake",
+			"args": [
+				"-Bbuild",
+				"-H.",
+				"-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+			],
+			"dependsOn": [ // 他のタスクに依存することを指定: この場合、"CMake: Clean Build Directory"タスクに依存
+				"CMake: Clean Build Directory"
+			],
+			"group": {
+				"kind": "build"
+			},
+			"detail": "CMake: ビルドシステムを設定し、ビルドファイルを生成"
+		},
+		{
+			"type": "shell",
+			"label": "CMake: Build Project",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"build"
+			],
+			"dependsOn": [ // "cmake"タスクに依存
+				"CMake: Configure Build System"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true // このタスクをビルドグループのデフォルトタスクに設定
+			},
+			"detail": "CMake: プロジェクトをビルド"
+		}
+	]
+}

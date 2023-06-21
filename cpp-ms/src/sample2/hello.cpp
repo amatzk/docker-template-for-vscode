@@ -3,6 +3,6 @@
 #include <iostream>
 
 void print_hello() {
-  std::cout << "Hello, world!" << std::endl;
+  std::cout << "Hello!" << std::endl;
   return;
 }
