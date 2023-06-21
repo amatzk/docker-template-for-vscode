@@ -16,8 +16,7 @@
                 }
             },
             "extensions": [
-                "vadimcn.vscode-lldb",
-                "jeff-hykin.better-cpp-syntax"
+                "vadimcn.vscode-lldb"
             ]
         }
     }
