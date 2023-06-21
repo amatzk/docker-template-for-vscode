@@ -13,7 +13,8 @@
                     "editor.defaultFormatter": "ms-vscode.cpptools",
                     "editor.formatOnSave": true,
                     "editor.formatOnPaste": true
-                }
+                },
+                "cmake.configureOnOpen": true
             },
             "extensions": [
                 "vadimcn.vscode-lldb"
