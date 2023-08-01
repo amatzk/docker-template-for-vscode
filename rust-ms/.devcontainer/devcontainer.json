@@ -1,6 +1,7 @@
 {
     "name": "rust-ms",
     "image": "mcr.microsoft.com/devcontainers/rust",
+    "init": true,
     "customizations": {
         "vscode": {
             "settings": {
@@ -11,8 +12,7 @@
                 "rust-analyzer.checkOnSave": true,
                 "rust-analyzer.check.command": "clippy"
             },
-            "extensions": [
-            ]
+            "extensions": []
         }
     }
 }

@@ -1,6 +1,7 @@
 {
     "name": "typescript-dev",
     "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "init": true,
     "customizations": {
         "vscode": {
             "settings": {

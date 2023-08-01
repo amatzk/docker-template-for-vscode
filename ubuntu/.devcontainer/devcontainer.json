@@ -6,6 +6,7 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "init": true,
     // Dockerイメージの指定（Dockerfileを指定しない場合）
     //
     // 次の３つのコンテナレジストリをサポート

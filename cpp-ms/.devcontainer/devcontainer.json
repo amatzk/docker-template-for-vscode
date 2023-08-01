@@ -4,6 +4,7 @@
         "dockerfile": "./Dockerfile",
         "context": "."
     },
+    "init": true,
     "customizations": {
         "vscode": {
             "settings": {

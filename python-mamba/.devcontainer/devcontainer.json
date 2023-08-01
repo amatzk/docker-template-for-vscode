@@ -1,6 +1,7 @@
 {
     "name": "python-mamba",
     "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    "init": true,
     "customizations": {
         "vscode": {
             "settings": {
